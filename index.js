@@ -7,12 +7,12 @@ import {
   TouchableWithoutFeedback,
   Animated,
 } from 'react-native'
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-var emitter = require('tiny-emitter/instance')
 
-const { BlurOverlay } = NativeModules
-var iface = {
+const emitter = require('tiny-emitter/instance')
+
+const iface = {
   name: 'BlurView',
   propTypes: {
     ...View.propTypes,
@@ -24,10 +24,12 @@ var iface = {
     idBlur: PropTypes.string,
   },
 }
-var RCTBlurOverlay = Platform.select({
+
+const RCTBlurOverlay = Platform.select({
   ios: () => requireNativeComponent('BlurOverlay', iface),
   android: () => requireNativeComponent('RCTBlurOverlay', iface),
 })()
+
 export default class BlurOverlay extends React.Component {
   constructor(props) {
     super(props)
@@ -38,6 +40,7 @@ export default class BlurOverlay extends React.Component {
     this._openOverlay = this.openOverlay.bind(this)
     this._closeOverlay = this.closeOverlay.bind(this)
   }
+
   openOverlay() {
     this.setState(
       {
@@ -53,6 +56,7 @@ export default class BlurOverlay extends React.Component {
       }
     )
   }
+
   closeOverlay() {
     Animated.timing(this.state.fadeIn, {
       toValue: 0,
@@ -60,10 +64,12 @@ export default class BlurOverlay extends React.Component {
       useNativeDriver: true,
     }).start(() => this.setState({ showBlurOverlay: false }))
   }
+
   componentDidMount() {
     emitter.on('drawer-open' + this.props.idBlur, this._openOverlay)
     emitter.on('drawer-close' + this.props.idBlur, this._closeOverlay)
   }
+
   componentWillUnmount() {
     emitter.off('drawer-open' + this.props.idBlur, this._openOverlay)
     emitter.off('drawer-close' + this.props.idBlur, this._closeOverlay)
@@ -71,44 +77,49 @@ export default class BlurOverlay extends React.Component {
 
   render() {
     const { children } = this.props
-    return this.state.showBlurOverlay ? (
-      <Animated.View style={[{ opacity: this.state.fadeIn }, styles.style]}>
+
+    if (!this.state.showBlurOverlay) {
+      return null;
+    }
+
+    return (
+      <Animated.View style={[{ opacity: this.state.fadeIn }, styles.container]}>
         <TouchableWithoutFeedback
-          style={styles.style}
+          style={styles.container}
           onPress={this.props.onPress}
         >
           <RCTBlurOverlay
             {...this.props}
-            style={[this.props.customStyles, styles.style]}
+            style={[this.props.customStyles, styles.container]}
           >
-            <View style={[this.props.customStyles, styles.style]}>
+            <View style={[this.props.customStyles, styles.container]}>
               {children}
             </View>
           </RCTBlurOverlay>
         </TouchableWithoutFeedback>
       </Animated.View>
-    ) : null
+    );
   }
-
 }
 
 const styles = StyleSheet.create({
-  style: {
+  container: {
     position: 'absolute',
     flex: 1,
     left: 0,
     top: 0,
     bottom: 0,
     right: 0,
-    //  resizeMode: 'cover',
     width: null,
     height: null,
     zIndex: 999,
   },
 })
+
 export function openOverlay(idBlur) {
   emitter.emit('drawer-open' + idBlur)
 }
+
 export function closeOverlay(idBlur) {
   emitter.emit('drawer-close' + idBlur)
 }

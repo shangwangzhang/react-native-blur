@@ -27,7 +27,7 @@
 		134814201AA4EA6300B7C361 /* libBlurOverlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBlurOverlay.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C237E5A21404C1F00D58C6A /* BlurOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlurOverlay.h; sourceTree = "<group>"; };
 		7C237E5B21404CF700D58C6A /* BlurOverlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurOverlay.m; sourceTree = "<group>"; };
-		7C2D7C00213FEF3C00ECFF15 /* SajjjadBlurOverlayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SajjjadBlurOverlayManager.h; sourceTree = "<group>"; };
+		7C2D7C00213FEF3C00ECFF15 /* BlurOverlayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlurOverlayManager.h; sourceTree = "<group>"; };
 		7C2D7C01213FEFBB00ECFF15 /* BlurOverlayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurOverlayManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +56,7 @@
 				7C237E5B21404CF700D58C6A /* BlurOverlay.m */,
 				7C237E5A21404C1F00D58C6A /* BlurOverlay.h */,
 				7C2D7C01213FEFBB00ECFF15 /* BlurOverlayManager.m */,
-				7C2D7C00213FEF3C00ECFF15 /* SajjjadBlurOverlayManager.h */,
+				7C2D7C00213FEF3C00ECFF15 /* BlurOverlayManager.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";

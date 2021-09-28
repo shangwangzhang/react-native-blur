@@ -1,4 +1,4 @@
-#import "SajjjadBlurOverlayManager.h"
+#import "BlurOverlayManager.h"
 
 @implementation BlurOverlayManager
 
