@@ -1,17 +1,17 @@
 
-# react-native-blur-overlay [![npm version](https://img.shields.io/npm/v/react-native-blur-overlay.svg)](https://www.npmjs.com/package/react-native-blur-overlay) [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/lvlrSajjad/react-native-blur-overlay/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/lvlrSajjad/react-native-blur-overlay/test_coverage)
+# react-native-blur [![npm version](https://img.shields.io/npm/v/react-native-blur.svg)](https://www.npmjs.com/package/react-native-blur) [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/shangwangzhang/react-native-blur/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/shangwangzhang/react-native-blur/test_coverage)
 
 
-<img src="https://raw.githubusercontent.com/lvlrSajjad/react-native-blur-overlay/master/giphy.gif" width="250">   <img src="https://raw.githubusercontent.com/lvlrSajjad/react-native-blur-overlay/master/Untitled.jpg" width="250">  <img src="https://raw.githubusercontent.com/lvlrSajjad/react-native-blur-overlay/master/Untitled2.jpg" width="250">
+<img src="https://raw.githubusercontent.com/shangwangzhang/react-native-blur/master/giphy.gif" width="250">   <img src="https://raw.githubusercontent.com/shangwangzhang/react-native-blur/master/Untitled.jpg" width="250">  <img src="https://raw.githubusercontent.com/shangwangzhang/react-native-blur/master/Untitled2.jpg" width="250">
 
 
 ## Getting started
 
-`$ npm install react-native-blur-overlay --save`
+`$ npm install react-native-blur --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-blur-overlay`
+`$ react-native link react-native-blur`
 
 ### Manual installation
 
@@ -27,17 +27,17 @@
 **Blur Only works on Android >= 17 !!! Brightness and should work everywhere though**
 
 1. Open up `android/app/src/main/java/[...]/MainApplication.java`
-  - Add `import com.bluroverly.SajjadBlurOverlayPackage;` to the imports at the top of the file
-  - Add `new SajjadBlurOverlayPackage()` to the list returned by the `getPackages()` method
+  - Add `import com.bluroverly.BlurOverlayPackage;` to the imports at the top of the file
+  - Add `new BlurOverlayPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
-      include ':react-native-blur-overlay'
-      project(':react-native-blur-overlay').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-blur-overlay/android')
+      include ':react-native-blur'
+      project(':react-native-blur').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-blur/android')
 
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-blur-overlay')
+      compile project(':react-native-blur')
   	```
 
 
@@ -45,7 +45,7 @@
 ```javascript
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import BlurOverlay,{closeOverlay,openOverlay} from 'react-native-blur-overlay';
+import BlurOverlay,{closeOverlay,openOverlay} from 'react-native-blur';
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',

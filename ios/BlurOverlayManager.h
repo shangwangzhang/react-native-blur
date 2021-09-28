@@ -6,8 +6,8 @@
  */
 
 #import "RCTViewManager.h"
-#import "SajjadBlurOverlay.h"
+#import "BlurOverlay.h"
 
-@interface SajjadBlurOverlayManager : RCTViewManager
+@interface BlurOverlayManager : RCTViewManager
 
 @end

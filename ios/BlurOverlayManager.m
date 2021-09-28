@@ -1,12 +1,12 @@
 #import "SajjjadBlurOverlayManager.h"
 
-@implementation SajjadBlurOverlayManager
+@implementation BlurOverlayManager
 
 RCT_EXPORT_MODULE();
 
 - (UIView *)view
 {
-    return [[SajjadBlurOverlay alloc] init];
+    return [[BlurOverlay alloc] init];
 }
 
 RCT_EXPORT_VIEW_PROPERTY(blurStyle, NSString);

@@ -8,7 +8,7 @@ import com.facebook.react.uimanager.ViewManager;
 
 import java.util.Collections;
 import java.util.List;
-public class SajjadBlurOverlayPackage implements ReactPackage {
+public class BlurOverlayPackage implements ReactPackage {
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
@@ -23,7 +23,7 @@ public class SajjadBlurOverlayPackage implements ReactPackage {
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Collections.<ViewManager>singletonList(
-                new SajjadBlurOverlayManager(reactContext)
+                new BlurOverlayManager(reactContext)
         );
     }
 }

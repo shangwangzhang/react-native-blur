@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C237E5C21404CF700D58C6A /* SajjadBlurOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C237E5B21404CF700D58C6A /* SajjadBlurOverlay.m */; };
-		7C2D7C02213FEFBB00ECFF15 /* SajjadBlurOverlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D7C01213FEFBB00ECFF15 /* SajjadBlurOverlayManager.m */; };
+		7C237E5C21404CF700D58C6A /* BlurOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C237E5B21404CF700D58C6A /* BlurOverlay.m */; };
+		7C2D7C02213FEFBB00ECFF15 /* BlurOverlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D7C01213FEFBB00ECFF15 /* BlurOverlayManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,11 +24,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libSajjadBlurOverlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSajjadBlurOverlay.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C237E5A21404C1F00D58C6A /* SajjadBlurOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SajjadBlurOverlay.h; sourceTree = "<group>"; };
-		7C237E5B21404CF700D58C6A /* SajjadBlurOverlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SajjadBlurOverlay.m; sourceTree = "<group>"; };
+		134814201AA4EA6300B7C361 /* libBlurOverlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBlurOverlay.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C237E5A21404C1F00D58C6A /* BlurOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlurOverlay.h; sourceTree = "<group>"; };
+		7C237E5B21404CF700D58C6A /* BlurOverlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurOverlay.m; sourceTree = "<group>"; };
 		7C2D7C00213FEF3C00ECFF15 /* SajjjadBlurOverlayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SajjjadBlurOverlayManager.h; sourceTree = "<group>"; };
-		7C2D7C01213FEFBB00ECFF15 /* SajjadBlurOverlayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SajjadBlurOverlayManager.m; sourceTree = "<group>"; };
+		7C2D7C01213FEFBB00ECFF15 /* BlurOverlayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurOverlayManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +45,7 @@
 		134814211AA4EA7D00B7C361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				134814201AA4EA6300B7C361 /* libSajjadBlurOverlay.a */,
+				134814201AA4EA6300B7C361 /* libBlurOverlay.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,9 +53,9 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				7C237E5B21404CF700D58C6A /* SajjadBlurOverlay.m */,
-				7C237E5A21404C1F00D58C6A /* SajjadBlurOverlay.h */,
-				7C2D7C01213FEFBB00ECFF15 /* SajjadBlurOverlayManager.m */,
+				7C237E5B21404CF700D58C6A /* BlurOverlay.m */,
+				7C237E5A21404C1F00D58C6A /* BlurOverlay.h */,
+				7C2D7C01213FEFBB00ECFF15 /* BlurOverlayManager.m */,
 				7C2D7C00213FEF3C00ECFF15 /* SajjjadBlurOverlayManager.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
@@ -64,9 +64,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58B511DA1A9E6C8500147676 /* SajjadBlurOverlay */ = {
+		58B511DA1A9E6C8500147676 /* BlurOverlay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "SajjadBlurOverlay" */;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "BlurOverlay" */;
 			buildPhases = (
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
@@ -76,9 +76,9 @@
 			);
 			dependencies = (
 			);
-			name = SajjadBlurOverlay;
+			name = BlurOverlay;
 			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libSajjadBlurOverlay.a */;
+			productReference = 134814201AA4EA6300B7C361 /* libBlurOverlay.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +95,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "SajjadBlurOverlay" */;
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "BlurOverlay" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -107,7 +107,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58B511DA1A9E6C8500147676 /* SajjadBlurOverlay */,
+				58B511DA1A9E6C8500147676 /* BlurOverlay */,
 			);
 		};
 /* End PBXProject section */
@@ -117,8 +117,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C237E5C21404CF700D58C6A /* SajjadBlurOverlay.m in Sources */,
-				7C2D7C02213FEFBB00ECFF15 /* SajjadBlurOverlayManager.m in Sources */,
+				7C237E5C21404CF700D58C6A /* BlurOverlay.m in Sources */,
+				7C2D7C02213FEFBB00ECFF15 /* BlurOverlayManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +229,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = SajjadBlurOverlay;
+				PRODUCT_NAME = BlurOverlay;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -245,7 +245,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = SajjadBlurOverlay;
+				PRODUCT_NAME = BlurOverlay;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -253,7 +253,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "SajjadBlurOverlay" */ = {
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "BlurOverlay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511ED1A9E6C8500147676 /* Debug */,
@@ -262,7 +262,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "SajjadBlurOverlay" */ = {
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "BlurOverlay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,

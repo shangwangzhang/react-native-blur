@@ -11,7 +11,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 var emitter = require('tiny-emitter/instance')
 
-const { SajjadBlurOverlay } = NativeModules
+const { BlurOverlay } = NativeModules
 var iface = {
   name: 'BlurView',
   propTypes: {
@@ -24,9 +24,9 @@ var iface = {
     idBlur: PropTypes.string,
   },
 }
-var RCTSajjadBlurOverlay = Platform.select({
-  ios: () => requireNativeComponent('SajjadBlurOverlay', iface),
-  android: () => requireNativeComponent('RCTSajjadBlurOverlay', iface),
+var RCTBlurOverlay = Platform.select({
+  ios: () => requireNativeComponent('BlurOverlay', iface),
+  android: () => requireNativeComponent('RCTBlurOverlay', iface),
 })()
 export default class BlurOverlay extends React.Component {
   constructor(props) {
@@ -77,14 +77,14 @@ export default class BlurOverlay extends React.Component {
           style={styles.style}
           onPress={this.props.onPress}
         >
-          <RCTSajjadBlurOverlay
+          <RCTBlurOverlay
             {...this.props}
             style={[this.props.customStyles, styles.style]}
           >
             <View style={[this.props.customStyles, styles.style]}>
               {children}
             </View>
-          </RCTSajjadBlurOverlay>
+          </RCTBlurOverlay>
         </TouchableWithoutFeedback>
       </Animated.View>
     ) : null

@@ -1,12 +1,12 @@
-#import "SajjadBlurOverlay.h"
+#import "BlurOverlay.h"
 
-@interface SajjadBlurOverlay ()
+@interface BlurOverlay ()
 
 @property (nonatomic, strong) UIVisualEffectView *effectsView;
 
 @end
 
-@implementation SajjadBlurOverlay
+@implementation BlurOverlay
 
 - (instancetype)init
 {
