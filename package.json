@@ -59,6 +59,5 @@
   },
   "version": "1.0.0",
   "dependencies": {
-    "tiny-emitter": "^2.0.2"
   }
 }
